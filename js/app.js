@@ -131,7 +131,7 @@ var ViewModel = function() {
         self.pickedTile2(tile);
         self.turnsTaken(self.turnsTaken() + 1);
         self.toggleVisibility(self.pickedTile2());
-        if (self.pickedTile1().name === self.pickedTile2().name) {
+        if (self.pickedTile1().id === self.pickedTile2().id) {
           self.matchFound();
         } else {
           self.noMatchFound();
