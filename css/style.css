@@ -1,0 +1,119 @@
+html,
+body,
+.col-xs-3 {
+  height: 100%;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+.container {
+  max-width: 768px;
+  background-color: #d3d3d3;
+  margin: 1em auto;
+  padding: 0 0 1.25em 0;
+  border-radius: 10px;
+  height: 97%;
+}
+
+/* Title and Stats */
+.title {
+  font: 3em 'Fredoka One', serif;
+  text-align: center;
+  margin: .25em;
+  color: #1e73b1;
+}
+
+.stats {
+  background-color: #ededed;
+  color: #353535;
+  margin: 0 1.25em;
+  padding: .25em;
+  font: bold 1em Verdana, Arial, sans-serif;
+  border: 2px solid;
+  border-radius: 10px;
+  min-height: 4.5em;
+}
+
+.turns-taken,
+.matches-left,
+.pick {
+  color: #1e73b1;
+}
+
+/* Game */
+.duck-row {
+  margin: 0 .25em;
+  height: 21%;
+}
+
+.tile {
+  height: 100%;
+
+  padding: 1.3em 0;
+}
+
+.tile-img {
+  max-height: 100%;
+  border-radius: 5%;
+}
+
+/* Game Over Window */
+.game-over {
+  font-size: 3em;
+  color: #1e73b1;
+  position: fixed;
+  text-align: center;
+  z-index: 1;
+  background-color: #ededed;
+  top: 50%;
+  left: 50%;
+  /* Transforms are used to help with centering */
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border: 5px solid #1e73b1;
+  border-radius: 10px;
+  padding: .25em;
+}
+
+.btn-play-again {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+}
+
+/* Prevent elements hidden by Knockout from flashing on page load */
+/* You also need to do a data-bind to the element- css: { hidden: false } */
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+
+  .container {
+    margin: 1em;
+    padding-bottom: 1em;
+  }
+
+  /* Title and Stats */
+  .title {
+    font-size: 1.6em;
+  }
+
+  .stats {
+    font-size: .6em;
+    min-height: 8em;
+  }
+
+  /* Game */
+  .duck-row {
+    margin: 0;
+  }
+
+  /* Game Over Window */
+  .game-over {
+    font-size: 1.5em;
+  }
+}
