@@ -1,5 +1,5 @@
 /* JSON Object to hold data for tiles to be used */
-var ducks = [
+var tech = [
   {
     'id': 1,
     'name': 'fingerprint',
@@ -174,12 +174,12 @@ var ViewModel = function() {
   // tiles if the are more tiles intantiated than self.NUM_TILES. Add matching tiles for
   // the tiles to be used, then shuffle the tiles again.
   this.initializeGame = function() {
-    self.addTiles(ducks);
+    self.addTiles(tech);
     self.shuffleTiles();
     if (self.tileList().length > self.NUM_TILES) {
       self.removeExtraTiles();
     }
-    self.addMatchingTiles(ducks);
+    self.addMatchingTiles(tech);
     self.shuffleTiles();
   };
 
