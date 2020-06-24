@@ -3,7 +3,7 @@ This is a responsive matching game using JQuery / JavaScript, Bootstrap, and Kno
 
 
 ## How to Play
-
+Play game at : https://mitmedialab.github.io/matching-ai/
 Your goal is to pick 2 tiles that match on each turn. If you pick tiles that match, then they disappear and you need to find all the other matches. Try to find all the matches in the least amount of turns possible.
 
 ## Run Project Locally
