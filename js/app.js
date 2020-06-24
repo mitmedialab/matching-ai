@@ -53,6 +53,7 @@ var tech = [
 ];
 
 var newTiles = false;
+var guessed = false;
 
 var Tile = function(data) {
   this.id = data.id;
@@ -63,6 +64,7 @@ var Tile = function(data) {
     {this.image = ko.observable(data.image2);}
   this.matched = ko.observable(false);
   this.imageVisible = ko.observable(false);
+  
 
   // Determine if you show the tile image side or the back of tile
   this.imageUrl = ko.computed(function() {
