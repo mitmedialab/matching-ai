@@ -2,52 +2,65 @@
 var tech = [
   {
     'id': 1,
-    'name': 'fingerprint',
-    'image': 'img/fingerprint.png'
+    'name': 'phone',
+    'image': 'img/phone.png',
+    'image2': 'img/phone2.png'
   },
   {
     'id': 2,
     'name': 'google',
-    'image': 'img/google.png'
+    'image': 'img/google.png',
+    'image2': 'img/google2.png'
   },
   {
     'id': 3,
     'name': 'maps',
-    'image': 'img/maps.png'
+    'image': 'img/maps.png',
+    'image2': 'img/maps2.png'
   },
   {
     'id': 4,
     'name': 'snapchat',
-    'image': 'img/snapchat.png'
+    'image': 'img/snapchat.png',
+    'image2': 'img/snapchat2.png'
   },
   {
     'id': 5,
     'name': 'spam',
-    'image': 'img/spam.png'
+    'image': 'img/spam.png',
+    'image2': 'img/spam2.png'
   },
   {
     'id': 6,
     'name': 'spotify' ,
-    'image': 'img/spotify.png'
+    'image': 'img/spotify.png',
+    'image2': 'img/spotify2.png'
   },
   {
     'id': 7,
     'name': 'tiktok',
-    'image': 'img/tiktok.png'
+    'image': 'img/tiktok.png',
+    'image2': 'img/tiktok2.png'
   },
   {
     'id': 8,
     'name': 'youtube',
-    'image': 'img/youtube.png'
+    'image': 'img/youtube.png',
+    'image2': 'img/youtube2.png'
   },
 
   
 ];
 
+var newTiles = false;
+
 var Tile = function(data) {
   this.id = data.id;
   this.name = ko.observable(data.name);
-  this.image = ko.observable(data.image);
+  if (!newTiles)
+    {this.image = ko.observable(data.image);}
+  else
+    {this.image = ko.observable(data.image2);}
   this.matched = ko.observable(false);
   this.imageVisible = ko.observable(false);
 
@@ -92,6 +105,7 @@ var ViewModel = function() {
   // Add/instantiate matching tiles for the tiles that will be used
   // in a game.
   this.addMatchingTiles = function(tiles) {
+    newTiles = true;
     var validTileIds = _.pluck(self.tileList(), 'id');
     tiles.forEach(function(tileItem) {
       if (_.contains((validTileIds), tileItem.id)) {
